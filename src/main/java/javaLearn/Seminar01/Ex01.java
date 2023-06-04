@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class Ex01 {
     public static void main(String[] args) {
-        System.out.println("Hello world");
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         System.out.println("subtractProductAndSum(n) = " + subtractProductAndSum(n));
