@@ -16,6 +16,11 @@ public class HW05 {
         permutation(array, array.length);
     }
 
+    /**
+     * @param arrays массив значений
+     * @param size   размер массива
+     * @apiNote вернуть массив массивов со всеми перестановками его элементов
+     */
     private static void permutation(int[] arrays, int size) {
         if (size < 2) {
             System.out.println(Arrays.toString(arrays));
@@ -28,6 +33,11 @@ public class HW05 {
         }
     }
 
+    /**
+     * @param a массив
+     * @param i первое значение
+     * @param j второе значение
+     */
     private static void swap(int[] a, int i, int j) {
         int temp = a[i];
         a[i] = a[j];
