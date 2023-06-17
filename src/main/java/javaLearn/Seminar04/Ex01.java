@@ -23,7 +23,7 @@ public class Ex01 {
         linkedList.removeFirst();
         linkedList.removeLast();
         System.out.println("linkedList = " + linkedList);
-        linkedList.contains(3);
+        System.out.println("linkedList.contains(3) = " + linkedList.contains(3));
     }
 
 
