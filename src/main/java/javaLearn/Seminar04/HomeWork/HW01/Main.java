@@ -41,7 +41,7 @@ public class Main {
     public static void showNodeList(Node node) {
         Node current = node;
         while (current != null) {
-            System.out.printf("%d, ", current.getValue());
+            System.out.printf("->%d", current.getValue());
             current = current.getNext();
         }
         System.out.println();
