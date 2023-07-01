@@ -5,19 +5,18 @@ import JavaPLO.Seminar08.HomeWork.Interface.Run;
 import JavaPLO.Seminar08.HomeWork.Obstacles.Treadmill;
 import JavaPLO.Seminar08.HomeWork.Obstacles.Wall;
 
-public class Human implements Run, Jump {
-
+public class Robot implements Run, Jump {
     private final String name;
     private final int heightJump;
     private int runDistance;
 
-    public Human(String name, int heightJump, int runDistance) {
+    public Robot(String name, int heightJump, int runDistance) {
         this.name = name;
         this.heightJump = heightJump;
         this.runDistance = runDistance;
     }
 
-    public Human(String name) {
+    public Robot(String name) {
         this.name = name;
         this.heightJump = 0;
         this.runDistance = 0;
@@ -26,7 +25,7 @@ public class Human implements Run, Jump {
     @Override
     public boolean jump(Wall wall) {
         if (heightJump >= wall.getHeight()) {
-            System.out.println(getName() + " перепрыгнул");
+            System.out.println(getName() + " перелетел");
             return true;
         } else {
             System.out.println(getName() + " выбыл из соревнования");
@@ -38,7 +37,7 @@ public class Human implements Run, Jump {
     public boolean run(Treadmill treadmill) {
         if (runDistance >= treadmill.getDistance()) {
             runDistance -= treadmill.getDistance();
-            System.out.println(getName() + " пробежал");
+            System.out.println(getName() + " проехал");
             return true;
         } else {
             System.out.println(getName() + " выбыл из соревнования");
@@ -49,5 +48,4 @@ public class Human implements Run, Jump {
     public String getName() {
         return name;
     }
-
 }

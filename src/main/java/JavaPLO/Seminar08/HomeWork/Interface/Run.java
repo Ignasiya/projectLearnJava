@@ -1,5 +1,7 @@
 package JavaPLO.Seminar08.HomeWork.Interface;
 
+import JavaPLO.Seminar08.HomeWork.Obstacles.Treadmill;
+
 public interface Run {
-    void run();
+    boolean run(Treadmill treadmill);
 }
