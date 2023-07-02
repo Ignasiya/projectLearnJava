@@ -1,4 +1,4 @@
-package JavaPLO.Seminar09.Ex04;
+package JavaPLO.Seminar09.Ex02;
 
 public enum Fruits {
     BANANA("Банан"), ORANGE("Апельсин"), APPLE("Яблоко");

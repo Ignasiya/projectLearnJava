@@ -1,4 +1,4 @@
-package JavaPLO.Seminar09.Ex05.Game;
+package JavaPLO.Seminar09.Ex03.Game;
 
 import java.util.Scanner;
 

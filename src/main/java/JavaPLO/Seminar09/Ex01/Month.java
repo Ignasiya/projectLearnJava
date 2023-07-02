@@ -1,4 +1,4 @@
-package JavaPLO.Seminar09.Ex03;
+package JavaPLO.Seminar09.Ex01;
 
 public enum Month {
     JAN, FEV, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCR, NOV, DEC;
