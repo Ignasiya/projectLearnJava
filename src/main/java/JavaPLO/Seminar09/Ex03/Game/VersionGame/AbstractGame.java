@@ -49,7 +49,6 @@ public abstract class AbstractGame implements Game {
     public Answer inputValue(String value) {
         if (--countTry == 0) {
             status = GameStatus.LOSE;
-            return new Answer(0, 0);
         }
         int bulls = 0;
         int cows = 0;
