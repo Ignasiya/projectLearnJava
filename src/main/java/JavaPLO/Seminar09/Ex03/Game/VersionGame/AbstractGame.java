@@ -1,4 +1,7 @@
-package JavaPLO.Seminar09.Ex03.Game;
+package JavaPLO.Seminar09.Ex03.Game.VersionGame;
+
+import JavaPLO.Seminar09.Ex03.Game.Answer;
+import JavaPLO.Seminar09.Ex03.Game.GameStatus;
 
 import java.util.List;
 import java.util.Random;
@@ -26,7 +29,6 @@ public abstract class AbstractGame implements Game {
         this.lengthWord = lengthWord;
         this.countTry = countTry;
         word = generateWord();
-        System.out.println("word = " + word);
     }
 
     private String generateWord() {
@@ -46,7 +48,7 @@ public abstract class AbstractGame implements Game {
     @Override
     public Answer inputValue(String value) {
         if (--countTry == 0) {
-            status = GameStatus.FINISH;
+            status = GameStatus.LOSE;
             return null;
         }
         int bulls = 0;
@@ -63,5 +65,9 @@ public abstract class AbstractGame implements Game {
     @Override
     public GameStatus getGameStatus() {
         return status;
+    }
+
+    public String getWord() {
+        return word;
     }
 }

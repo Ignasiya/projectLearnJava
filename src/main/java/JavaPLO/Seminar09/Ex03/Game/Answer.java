@@ -23,7 +23,6 @@ public class Answer {
 
     @Override
     public String toString() {
-        return "коровы = " + bulls +
-                ", коровы = " + cows;
+        return "быки = " + bulls + ", коровы = " + cows;
     }
 }

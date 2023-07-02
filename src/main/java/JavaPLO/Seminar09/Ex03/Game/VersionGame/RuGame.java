@@ -1,15 +1,15 @@
-package JavaPLO.Seminar09.Ex03.Game;
+package JavaPLO.Seminar09.Ex03.Game.VersionGame;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class NumberGame extends AbstractGame{
+public class RuGame extends AbstractGame {
 
     @Override
     public List<String> generateCharList() {
         List<String> strList = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            strList.add(Integer.toString(i));
+        for (int i = 'а'; i <= 'я'; i++) {
+            strList.add(Character.toString(i));
         }
         return strList;
     }
