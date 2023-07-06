@@ -1,23 +1,20 @@
 package Patterns.FactoryPattern.FactoryMethod.Pizza;
 
+import Patterns.FactoryPattern.FactoryMethod.Ingredient.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Pizza {
     protected String name;
-    protected String dough;
-    protected String sauce;
-    protected List<String> toppings = new ArrayList<>();
+    protected Dough dough;
+    protected Sauce sauce;
+    protected Veggies veggies[];
+    protected Cheese cheese;
+    protected Pepperoni pepperoni;
+    protected Clam clam;
 
-    public void prepare() {
-        System.out.println("Подготовка " + name);
-        System.out.println("Перемешивание теста...");
-        System.out.println("Добавление соуса...");
-        System.out.println("Добавление начинок: ");
-        for (String topping : toppings) {
-            System.out.println(" " + topping);
-        }
-    }
+    public abstract void prepare();
 
     public void bake() {
         System.out.println("Выпекайте 25 минут при температуре 350");
@@ -33,5 +30,9 @@ public abstract class Pizza {
 
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
