@@ -1,4 +1,4 @@
-## Изучаю джава:
+## Изучаю Java:
 
 Содержание:
 * [Алгоритмы и структура данных](https://github.com/Ignasiya/projectLearnJava/tree/main/src/main/java/algotithmsAndData)
