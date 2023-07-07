@@ -1,4 +1,4 @@
-package Patterns.SingletonPattern;
+package Patterns.SingletonPattern.Singleton;
 
 public class SingletonV1 {
     private static SingletonV1 uniqueInstance;
