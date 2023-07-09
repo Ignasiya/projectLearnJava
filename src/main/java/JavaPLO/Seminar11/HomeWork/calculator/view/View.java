@@ -1,6 +1,5 @@
 package JavaPLO.Seminar11.HomeWork.calculator.view;
 
-import JavaPLO.Seminar09.Ex03.Game.Logging;
 import JavaPLO.Seminar11.HomeWork.calculator.controllers.Controller;
 import JavaPLO.Seminar11.HomeWork.calculator.data.Calculator.CalculatorComplex;
 import JavaPLO.Seminar11.HomeWork.calculator.data.Calculator.CalculatorRational;
@@ -77,7 +76,7 @@ public class View {
     }
 
     private static void loggingGame(Scanner scanner, List<Log> logging) {
-        System.out.print("Хотите посмотреть иторию игры? Y/N: ");
+        System.out.print("Хотите посмотреть логи? Y/N: ");
         String input = scanner.next();
         if (input.toUpperCase().equals("Y")) {
             for (Log log : logging) {
