@@ -2,7 +2,7 @@ package JavaPLO.Lesson11.Ex002Phonebook.Core.Models;
 
 import java.time.LocalDate;
 
-public class Contact  implements Comparable<Contact> {
+public class Contact implements Comparable<Contact> {
     public LocalDate date;
     public String firstName;
     public String lastName;
@@ -17,7 +17,7 @@ public class Contact  implements Comparable<Contact> {
         this.lastName = lastName;
         this.description = description;
     }
-    
+
     // добавить возможность создания объектов с бОльшим
     // количеством параметров
 
@@ -29,10 +29,10 @@ public class Contact  implements Comparable<Contact> {
 
     @Override
     public boolean equals(Object obj) {
-        Contact t = (Contact)obj;
+        Contact t = (Contact) obj;
         return this.firstName == t.firstName
                 && this.lastName == t.lastName
-        ;
+                ;
     }
 
 }

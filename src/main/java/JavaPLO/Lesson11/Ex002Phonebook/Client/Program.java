@@ -1,6 +1,7 @@
 package JavaPLO.Lesson11.Ex002Phonebook.Client;
 
-import Ex002Phonebook.UI.App;
+
+import JavaPLO.Lesson11.Ex002Phonebook.UI.App;
 
 public class Program {
 
