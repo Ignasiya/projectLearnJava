@@ -2,9 +2,9 @@ package JavaPLO.Seminar11.HomeWork.calculator.data;
 
 public class Log<N> {
     static int count = 1;
-    private int id;
-    private N numbers;
-    private N result;
+    private final int id;
+    private final N numbers;
+    private final N result;
 
 
     public Log(N numbers, N result) {
