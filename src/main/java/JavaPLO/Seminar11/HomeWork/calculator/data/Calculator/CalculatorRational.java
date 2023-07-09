@@ -1,41 +1,40 @@
-package JavaPLO.Seminar11.HomeWork.calculator.data;
+package JavaPLO.Seminar11.HomeWork.calculator.data.Calculator;
 
-public class Calculator {
-
-    private static Calculator uniqueInstance;
+public class CalculatorRational extends Calculator<Double> {
     private double numOne;
     private double numTwo;
-    private char operation;
 
-    public Calculator(String in) {
+    public CalculatorRational(String in) {
         char[] chars = in.toCharArray();
         String temp = "";
         for (char ch : chars) {
             if (ch == '/' || ch == '*' || ch == '+' || ch == '-') {
-                this.operation = ch;
+                super.operation = ch;
                 this.numOne = Double.parseDouble(temp.strip());
                 temp = "";
-            }
-            temp += ch;
+            } else temp += ch;
         }
         this.numTwo = Double.parseDouble(temp.strip());
     }
-    public Calculator(double num, String in) {
+    public CalculatorRational(double numOne, String in) {
+        this.numOne = numOne;
         char[] chars = in.toCharArray();
         String temp = "";
         for (char ch : chars) {
             if (ch == '/' || ch == '*' || ch == '+' || ch == '-') {
-                this.operation = ch;
+                super.operation = ch;
                 temp = "";
-            }
-            temp += ch;
+            } else temp += ch;
         }
         this.numTwo = Double.parseDouble(temp.strip());
     }
 
-    public static Calculator getInstance(String in) {
-        if (uniqueInstance == null) uniqueInstance = new Calculator(in);
-        return uniqueInstance;
+    public Double getNumOne() {
+        return numOne;
+    }
+
+    public Double getNumTwo() {
+        return numTwo;
     }
 
     @Override
