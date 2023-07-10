@@ -10,8 +10,11 @@ public abstract class Calculator<N> {
         return operation;
     }
 
-    abstract public N getNumOne();
+    public N getNumOne() {
+        return numOne;
+    }
 
-    abstract public N getNumTwo();
-
+    public N getNumTwo() {
+        return numTwo;
+    }
 }

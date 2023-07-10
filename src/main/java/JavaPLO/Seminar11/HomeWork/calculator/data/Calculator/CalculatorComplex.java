@@ -3,8 +3,6 @@ package JavaPLO.Seminar11.HomeWork.calculator.data.Calculator;
 import JavaPLO.Seminar11.HomeWork.calculator.data.Complex;
 
 public class CalculatorComplex extends Calculator<Complex> {
-    private Complex numOne;
-    private Complex numTwo;
 
     public CalculatorComplex(String in) {
         char[] chars = in.toCharArray();
@@ -17,18 +15,18 @@ public class CalculatorComplex extends Calculator<Complex> {
                 String[] complex = temp.strip().split(" ");
                 re = Double.parseDouble(complex[0]);
                 im = Double.parseDouble(complex[1]);
-                this.numOne = new Complex(re, im);
+                super.numOne = new Complex(re, im);
                 temp = "";
             } else temp += ch;
         }
         String[] complex = temp.strip().split(" ");
         re = Double.parseDouble(complex[0]);
         im = Double.parseDouble(complex[1]);
-        this.numTwo = new Complex(re, im);
+        super.numTwo = new Complex(re, im);
     }
 
     public CalculatorComplex(Complex num, String in) {
-        this.numOne = num;
+        super.numOne = num;
         char[] chars = in.toCharArray();
         String temp = "";
         double re;
@@ -42,15 +40,7 @@ public class CalculatorComplex extends Calculator<Complex> {
         String[] complex = temp.strip().split(" ");
         re = Double.parseDouble(complex[0]);
         im = Double.parseDouble(complex[1]);
-        this.numTwo = new Complex(re, im);
-    }
-
-    public Complex getNumOne() {
-        return numOne;
-    }
-
-    public Complex getNumTwo() {
-        return numTwo;
+        super.numTwo = new Complex(re, im);
     }
 
     @Override

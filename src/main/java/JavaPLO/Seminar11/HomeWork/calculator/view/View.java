@@ -24,8 +24,14 @@ public class View {
                 "[C]- для выхода");
         String key = in.next().strip().toLowerCase();
         switch (key) {
-            case "1": partRational(in);
-            case "2": partComplex(in);
+            case "1": {
+                partRational(in);
+                break;
+            }
+            case "2": {
+                partComplex(in);
+                break;
+            }
             default: {
                 in.close();
                 break;
