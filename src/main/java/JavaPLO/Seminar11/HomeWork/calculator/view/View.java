@@ -17,33 +17,32 @@ public class View {
     private List<Log> logging = new ArrayList<>();
     public void start() {
         Scanner in = new Scanner(System.in).useDelimiter("\r?\n");;
-        System.out.println("_________________________________________\n" +
-                "Выберите с каким числами хотите работать: \n" +
-                "[1]- рациональные числа\n" +
-                "[2]- комплексные числа\n" +
-                "[C]- для выхода");
+        System.out.println("""
+                _________________________________________
+                Выберите с каким числами хотите работать:\s
+                [1]- рациональные числа
+                [2]- комплексные числа
+                [C]- для выхода""");
         String key = in.next().strip().toLowerCase();
         switch (key) {
-            case "1": {
+            case "1" -> {
                 partRational(in);
-                break;
             }
-            case "2": {
+            case "2" -> {
                 partComplex(in);
-                break;
             }
-            default: {
+            default -> {
                 in.close();
-                break;
             }
         }
     }
 
     public void partRational(Scanner in) {
-        System.out.println("______________RATIONAL_NUMBER______________\n" +
-                "ИНСТУКЦИЯ:\n" +
-                "значения вводите в формате: \n" +
-                "<Число СимволОперации Число>");
+        System.out.println("""
+                ______________RATIONAL_NUMBER______________
+                ИНСТУКЦИЯ:
+                значения вводите в формате:\s
+                <Число СимволОперации Число>""");
         String key = in.next().toLowerCase();
         CalculatorRational calculator;
         double result = 0;
@@ -61,10 +60,11 @@ public class View {
         loggingGame(in, logging);
     }
     public void partComplex(Scanner in) {
-        System.out.println("______________COMPLEX_NUMBER______________\n" +
-                "ИНСТУКЦИЯ:\n" +
-                "значения вводите в формате: \n" +
-                "<Действительное Мнимое СимволОперации Действительное Мнимое>");
+        System.out.println("""
+                ______________COMPLEX_NUMBER______________
+                ИНСТУКЦИЯ:
+                значения вводите в формате:\s
+                <Действительное Мнимое СимволОперации Действительное Мнимое>""");
         String key = in.next().toLowerCase();
         CalculatorComplex calculator;
         Complex result = null;
@@ -74,6 +74,7 @@ public class View {
                 status = Status.NEXT;
             } else calculator = new CalculatorComplex(result, key);
             result = controller.sendComplex(calculator);
+            logging.add(new Log(calculator, result));
             System.out.print(result);
             key = in.next().toLowerCase();
         }
