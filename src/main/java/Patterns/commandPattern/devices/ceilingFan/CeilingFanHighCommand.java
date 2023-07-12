@@ -2,19 +2,19 @@ package Patterns.commandPattern.devices.ceilingFan;
 
 import Patterns.commandPattern.devices.Command;
 
-public class CeilingFanOffCommand extends Command {
+public class CeilingFanHighCommand extends Command {
     CeilingFan ceilingFan;
     int prevSpeed;
 
-    public CeilingFanOffCommand(String name, CeilingFan ceilingFan) {
-        super(name);
+    public CeilingFanHighCommand(String nameCommand, CeilingFan ceilingFan) {
+        super(nameCommand);
         this.ceilingFan = ceilingFan;
     }
 
     @Override
     public void execute() {
         prevSpeed = ceilingFan.getSpeed();
-        ceilingFan.off();
+        ceilingFan.high();
     }
 
     @Override

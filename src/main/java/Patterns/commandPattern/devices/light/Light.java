@@ -7,7 +7,7 @@ public class Light {
         this.name = name;
     }
 
-    void on() {
+    public void on() {
         System.out.println(name + " свет включен");
     }
 

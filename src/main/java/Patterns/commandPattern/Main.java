@@ -1,5 +1,7 @@
 package Patterns.commandPattern;
 
+import Patterns.commandPattern.devices.Command;
+import Patterns.commandPattern.devices.MacroCommand;
 import Patterns.commandPattern.devices.ceilingFan.*;
 import Patterns.commandPattern.devices.garageDoor.*;
 import Patterns.commandPattern.devices.light.*;
@@ -20,7 +22,9 @@ public class Main {
         LightOnCommand kitchenLightOn = new LightOnCommand("Свет в кухне - ON", kitchenLight);
         LightOffCommand kitchenLightOff = new LightOffCommand("Свет в кухне - OFF", kitchenLight);
 
-        CeilingFanOnCommand ceilingFanOn = new CeilingFanOnCommand("Вентилятор в комнате - ON", ceilingFan);
+        CeilingFanHighCommand ceilingFanHigh = new CeilingFanHighCommand("Вентилятор в комнате - HIGH", ceilingFan);
+        CeilingFanMediumCommand ceilingFanMedium = new CeilingFanMediumCommand("Вентилятор в комнате - MEDIUM", ceilingFan);
+        CeilingFanLowCommand ceilingFanLow = new CeilingFanLowCommand("Вентилятор в комнате - LOW", ceilingFan);
         CeilingFanOffCommand ceilingFanOff = new CeilingFanOffCommand("Вентилятор в комнате - OFF", ceilingFan);
 
         GarageDoorUpCommand garageDoorUp = new GarageDoorUpCommand("Дверь гаража - UP", garageDoor);
@@ -29,23 +33,29 @@ public class Main {
         StereoOnWithCDCommand stereoOnWithCD = new StereoOnWithCDCommand("Стерео с CD - ON", stereo);
         StereoOffCommand stereoOffCommand = new StereoOffCommand("Стерео - OFF", stereo);
 
-        remoteControl.setCommand(0, roomLightOn, roomLightOff);
-        remoteControl.setCommand(1, kitchenLightOn, kitchenLightOff);
-        remoteControl.setCommand(2, ceilingFanOn, ceilingFanOff);
-        remoteControl.setCommand(3, garageDoorUp, garageDoorDown);
-        remoteControl.setCommand(4, stereoOnWithCD, stereoOffCommand);
+        Command[] partyOn = {roomLightOn, kitchenLightOn, garageDoorUp, stereoOnWithCD};
+        Command[] partyOff = {roomLightOff, kitchenLightOff, garageDoorDown, stereoOffCommand};
 
-        System.out.println(remoteControl);
+        MacroCommand partyOnMacro = new MacroCommand("Макро команда", partyOn);
+        MacroCommand partyOffMacro = new MacroCommand("Макро команда", partyOff);
+
+        remoteControl.setCommand(0, ceilingFanLow, ceilingFanOff);
+        remoteControl.setCommand(1, ceilingFanMedium, ceilingFanOff);
+        remoteControl.setCommand(2, ceilingFanHigh, ceilingFanOff);
+        remoteControl.setCommand(3, partyOnMacro, partyOffMacro);
 
         remoteControl.onButton(0);
         remoteControl.offButton(0);
+        System.out.println(remoteControl);
+        remoteControl.undoButton();
+
         remoteControl.onButton(1);
-        remoteControl.offButton(1);
-        remoteControl.onButton(2);
-        remoteControl.offButton(2);
+        System.out.println(remoteControl);
+        remoteControl.undoButton();
+
+        System.out.println("-----Pushing Macro On-----");
         remoteControl.onButton(3);
+        System.out.println("-----Pushing Macro Off-----");
         remoteControl.offButton(3);
-        remoteControl.onButton(4);
-        remoteControl.offButton(4);
     }
 }

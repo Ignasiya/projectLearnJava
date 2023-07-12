@@ -10,4 +10,9 @@ public class NoCommand extends Command{
     public void execute() {
         System.out.println("Нет комманды");
     }
+
+    @Override
+    public void undo() {
+        System.out.println("Нет комманды");
+    }
 }
