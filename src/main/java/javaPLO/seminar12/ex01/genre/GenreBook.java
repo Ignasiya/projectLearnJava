@@ -1,4 +1,4 @@
-package javaPLO.seminar12.ex01;
+package javaPLO.seminar12.ex01.genre;
 
 public class GenreBook implements Genre {
     private String genreName;

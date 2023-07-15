@@ -1,4 +1,6 @@
-package javaPLO.seminar12.ex01;
+package javaPLO.seminar12.ex01.book;
+
+import javaPLO.seminar12.ex01.genre.GenreBook;
 
 public class ElectronBook extends Book {
     private String format;

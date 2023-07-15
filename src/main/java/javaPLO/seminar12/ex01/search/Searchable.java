@@ -1,4 +1,6 @@
-package javaPLO.seminar12.ex01;
+package javaPLO.seminar12.ex01.search;
+
+import javaPLO.seminar12.ex01.book.Book;
 
 import java.util.List;
 

@@ -1,8 +1,13 @@
 package javaPLO.seminar12.ex01;
 
-import java.util.ArrayList;
+import javaPLO.seminar12.ex01.book.Book;
+import javaPLO.seminar12.ex01.book.ElectronBook;
+import javaPLO.seminar12.ex01.formatter.Formatter;
+import javaPLO.seminar12.ex01.formatter.JSONFormatter;
+import javaPLO.seminar12.ex01.genre.GenreBook;
+import javaPLO.seminar12.ex01.search.Library;
+
 import java.util.Arrays;
-import java.util.List;
 
 public class Main {
     /*a) Book - должен отвечать только за хранение информации о книге. (единственная ответственность -> Single Responsibility Principle)
