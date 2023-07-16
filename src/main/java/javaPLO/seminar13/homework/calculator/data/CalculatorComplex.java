@@ -1,6 +1,4 @@
-package javaPLO.seminar13.homework.calculator.data.Calculator;
-
-import javaPLO.seminar13.homework.calculator.data.Complex;
+package javaPLO.seminar13.homework.calculator.data;
 
 public class CalculatorComplex implements Calculator {
 

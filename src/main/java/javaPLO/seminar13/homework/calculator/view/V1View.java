@@ -1,7 +1,7 @@
 package javaPLO.seminar13.homework.calculator.view;
 
 import javaPLO.seminar13.homework.calculator.controllers.*;
-import javaPLO.seminar13.homework.calculator.data.Calculator.CalculatorComplex;
+import javaPLO.seminar13.homework.calculator.data.CalculatorComplex;
 import javaPLO.seminar13.homework.calculator.data.Complex;
 import javaPLO.seminar13.homework.calculator.data.Log;
 

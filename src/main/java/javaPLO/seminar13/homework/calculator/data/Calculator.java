@@ -1,4 +1,4 @@
-package javaPLO.seminar13.homework.calculator.data.Calculator;
+package javaPLO.seminar13.homework.calculator.data;
 
 import javaPLO.seminar13.homework.calculator.data.Complex;
 

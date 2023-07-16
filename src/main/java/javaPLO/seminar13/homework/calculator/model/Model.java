@@ -1,6 +1,6 @@
 package javaPLO.seminar13.homework.calculator.model;
 
-import javaPLO.seminar13.homework.calculator.data.Calculator.Calculator;
+import javaPLO.seminar13.homework.calculator.data.Calculator;
 import javaPLO.seminar13.homework.calculator.data.Complex;
 
 public interface Model {

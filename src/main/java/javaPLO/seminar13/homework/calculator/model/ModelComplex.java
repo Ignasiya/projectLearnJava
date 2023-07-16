@@ -1,11 +1,11 @@
 package javaPLO.seminar13.homework.calculator.model;
 
-import javaPLO.seminar13.homework.calculator.data.Calculator.Calculator;
+import javaPLO.seminar13.homework.calculator.data.Calculator;
 import javaPLO.seminar13.homework.calculator.data.Complex;
-import javaPLO.seminar13.homework.calculator.data.OperationComplex.ComplexDiff;
-import javaPLO.seminar13.homework.calculator.data.OperationComplex.ComplexDiv;
-import javaPLO.seminar13.homework.calculator.data.OperationComplex.ComplexMulti;
-import javaPLO.seminar13.homework.calculator.data.OperationComplex.ComplexSum;
+import javaPLO.seminar13.homework.calculator.data.ComplexDiff;
+import javaPLO.seminar13.homework.calculator.data.ComplexDiv;
+import javaPLO.seminar13.homework.calculator.data.ComplexMulti;
+import javaPLO.seminar13.homework.calculator.data.ComplexSum;
 
 public class ModelComplex implements Model {
 
@@ -13,16 +13,16 @@ public class ModelComplex implements Model {
     public Complex calculate(Calculator calc) {
         switch (calc.getOperation()) {
             case '+' -> {
-                return new ComplexSum().sum(calc.getNumOne(), calc.getNumTwo());
+                return new ComplexSum().getExecute(calc.getNumOne(), calc.getNumTwo());
             }
             case '-' -> {
-                return new ComplexDiff().diff(calc.getNumOne(), calc.getNumTwo());
+                return new ComplexDiff().getExecute(calc.getNumOne(), calc.getNumTwo());
             }
             case '/' -> {
-                return new ComplexDiv().div(calc.getNumOne(), calc.getNumTwo());
+                return new ComplexDiv().getExecute(calc.getNumOne(), calc.getNumTwo());
             }
             case '*' -> {
-                return new ComplexMulti().multi(calc.getNumOne(), calc.getNumTwo());
+                return new ComplexMulti().getExecute(calc.getNumOne(), calc.getNumTwo());
             }
         }
         return null;
