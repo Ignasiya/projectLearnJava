@@ -1,7 +1,7 @@
-package javaPLO.seminar12.homeWork.model.change;
+package javaPLO.seminar12.homeWork.model;
 
 import javaPLO.seminar12.homeWork.data.Product;
-import javaPLO.seminar12.homeWork.data.warehouse.Warehouse;
+import javaPLO.seminar12.homeWork.data.Warehouse;
 import javaPLO.seminar12.homeWork.model.Model;
 
 import java.util.Scanner;

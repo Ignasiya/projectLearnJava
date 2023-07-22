@@ -1,4 +1,4 @@
-package javaPLO.seminar12.homeWork.data.warehouse;
+package javaPLO.seminar12.homeWork.data;
 
 import javaPLO.seminar12.homeWork.data.AddDeleteProduct;
 import javaPLO.seminar12.homeWork.data.IncreaseDecreaseAmount;

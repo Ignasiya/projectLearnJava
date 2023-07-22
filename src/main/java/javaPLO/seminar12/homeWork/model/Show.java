@@ -1,6 +1,6 @@
 package javaPLO.seminar12.homeWork.model;
 
-import javaPLO.seminar12.homeWork.data.warehouse.Warehouse;
+import javaPLO.seminar12.homeWork.data.Warehouse;
 
 import java.util.Scanner;
 

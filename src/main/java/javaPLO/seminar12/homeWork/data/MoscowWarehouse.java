@@ -1,8 +1,7 @@
-package javaPLO.seminar12.homeWork.data.warehouse;
+package javaPLO.seminar12.homeWork.data;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import javaPLO.seminar12.homeWork.data.Product;
 
 import java.io.File;
 import java.io.IOException;

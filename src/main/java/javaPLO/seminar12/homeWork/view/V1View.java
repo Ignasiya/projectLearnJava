@@ -1,10 +1,10 @@
 package javaPLO.seminar12.homeWork.view;
 
 import javaPLO.seminar12.homeWork.control.*;
-import javaPLO.seminar12.homeWork.data.warehouse.MoscowWarehouse;
-import javaPLO.seminar12.homeWork.data.warehouse.Warehouse;
+import javaPLO.seminar12.homeWork.data.MoscowWarehouse;
+import javaPLO.seminar12.homeWork.data.Warehouse;
 import javaPLO.seminar12.homeWork.model.*;
-import javaPLO.seminar12.homeWork.model.change.Change;
+import javaPLO.seminar12.homeWork.model.Change;
 
 import java.util.Scanner;
 
