@@ -1,6 +1,5 @@
 package exceptions.lesson02;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 

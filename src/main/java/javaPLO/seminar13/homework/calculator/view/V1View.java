@@ -24,7 +24,7 @@ public class V1View implements View {
         System.out.println("""
                 ___________________COMPLEX_NUMBER_CALCULATOR____________________
                 ИНСТУКЦИЯ:
-                операции (+, -, *, /), значения вводите в формате:\s
+                операции (+, -, *, /), <c> для выхода, значения вводите в формате:\s
                 <Действительное Мнимое СимволОперации Действительное Мнимое>""");
         String key = in.next().toLowerCase();
         CalculatorComplex calculator;
