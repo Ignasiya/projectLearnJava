@@ -5,3 +5,4 @@
 * [Паттерны проектирования](https://github.com/Ignasiya/projectLearnJava/tree/main/src/main/java/patterns)
 * [ООП](https://github.com/Ignasiya/projectLearnJava/tree/main/src/main/java/javaPLO)
 * [Базовые API](https://github.com/Ignasiya/projectLearnJava/tree/main/src/main/java/javaLearn)
+* [Исключения](https://github.com/Ignasiya/projectLearnJava/tree/main/src/main/java/exceptions)
